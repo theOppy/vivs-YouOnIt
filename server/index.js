@@ -29,7 +29,7 @@ app.use("/tweetInfo", TweetInfoRouter);
 app.use("/otheruser", OtherUserRouter);
 
 mongoose
-  .connect("mongodb+srv://vivekpatel1nov:VIVGamer007@cluster0.zpt8cjs.mongodb.net/?retryWrites=true&w=majority", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

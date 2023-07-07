@@ -34,6 +34,6 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() =>
-    app.listen(3001, console.log(`Server is Actived!`))
+    app.listen(process.env.PORT || 3001, console.log(`Server is Actived!`))
   )
   .catch((err) => console.log(err));
